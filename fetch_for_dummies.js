@@ -19,10 +19,10 @@ It may have some specific use cases I'm not aware of, but I can now conceptualiz
 what then() does and it seems syntactically more memorable and clean.
 */
 
-let url = 'dumb.php'; // dumb.php just echos out a json opject
+let url = 'dumb.php'; // dumb.php just echos out a json object {"firstName":"Adam"}
 fetch(url)
 .then(foo => foo.json()) // two names have to be the same because they are referring to the same object
-.then(bar => alert(bar.record));  // these two also must match but could be the same as the prev line
+.then(bar => alert(bar.firstName));  // these two also must match but could be the same as the prev line
 // all four object names above COULD be "foo", "bar" or "myCat" and it would still work fine. 
 
 
